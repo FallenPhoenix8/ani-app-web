@@ -26,12 +26,16 @@ const emit = defineEmits(["change:activeSpotlight"])
           class="inline-block h-1 w-1 leading-none bg-gray-400 mx-[0.25rem] rotate-45"
         ></span>
         <span>Subbed</span>
-        <span> | </span>
-        <span>{{ spotlightAnime.episodes.dub }}</span>
+
+        <span v-if="spotlightAnime.episodes.dub"> | </span>
+        <span v-if="spotlightAnime.episodes.dub">{{
+          spotlightAnime.episodes.dub
+        }}</span>
         <span
           class="inline-block h-1 w-1 leading-none bg-gray-400 mx-[0.25rem] rotate-45"
+          v-if="spotlightAnime.episodes.dub"
         ></span>
-        <span>Dubbed</span>
+        <span v-if="spotlightAnime.episodes.dub">Dubbed</span>
       </h3>
       <p class="hidden md:block text-gray-300 p-5 pr-0 max-w-md">
         <span class="line-clamp-5">

@@ -8,7 +8,7 @@ console.log(genres)
 <template>
   <div class="hidden md:flex space-x-10 items-center min-h-full">
     <div class="flex items-center space-x-4 min-h-full">
-      <NuxtLink class="hover:text-primary cursor-pointer">Home</NuxtLink>
+      <NuxtLink class="hover:text-primary cursor-pointer" to="/">Home</NuxtLink>
 
       <ClientOnly>
         <div
@@ -43,8 +43,8 @@ console.log(genres)
         </div>
       </ClientOnly>
 
-      <NuxtLink class="hover:text-primary cursor-pointer"
-        >Most Popular</NuxtLink
+      <NuxtLink class="hover:text-primary cursor-pointer" to="/#trending"
+        >Trending</NuxtLink
       >
     </div>
 
@@ -60,6 +60,14 @@ console.log(genres)
     <div class="flex space-x-4">
       <NuxtLink class="hover:text-primary cursor-pointer">Movies</NuxtLink>
       <NuxtLink class="hover:text-primary cursor-pointer">OVAs</NuxtLink>
+    </div>
+    <div class="flex space-x-4">
+      <NuxtLink to="/#top-ten" class="hover:text-primary cursor-pointer"
+        >Top 10 Animes</NuxtLink
+      >
+      <NuxtLink to="/#latest-episode" class="hover:text-primary cursor-pointer"
+        >Latest Episode</NuxtLink
+      >
     </div>
   </div>
 </template>
