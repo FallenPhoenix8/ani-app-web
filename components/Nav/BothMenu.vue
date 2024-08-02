@@ -14,12 +14,16 @@ const searchQuery = ref("")
     <form class="relative mx-5">
       <input
         type="text"
-        class="border-b border-b-slate-300 bg-transparent z-20 w-80 focus:outline-none focus:w-96 focus:border-b-primary transition-all duration-500"
+        class="border-b border-b-slate-300 bg-transparent z-20 w-60 focus:outline-none focus:w-72 focus:border-b-primary transition-all duration-500"
         placeholder="Search anime..."
         v-model="searchQuery"
       />
       <button class="absolute right-0 z-10">
-        <font-awesome-icon icon="search" size="xl" />
+        <font-awesome-icon
+          icon="search"
+          size="xl"
+          class="hover:text-primary focus:text-primary transition duration-200"
+        />
       </button>
     </form>
   </div>

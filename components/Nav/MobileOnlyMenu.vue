@@ -2,7 +2,7 @@
 const emit = defineEmits(["update:is-active-menu"])
 </script>
 <template>
-  <button class="ml-5 md:hidden" @click="() => emit('update:is-active-menu')">
+  <button class="ml-5 lg:hidden" @click="() => emit('update:is-active-menu')">
     <div>
       <ClientOnly>
         <font-awesome-icon icon="bars" size="xl" />

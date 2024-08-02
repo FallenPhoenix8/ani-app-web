@@ -15,7 +15,7 @@ const emit = defineEmits(["change:activeSpotlight"])
     <div
       class="flex flex-col justify-center w-full md:max-w-lg md:h-full bg-gradient-to-b md:bg-gradient-to-l from-transparent to-bgColor"
     >
-      <h1 class="font-teko text-center text-4xl md:text-6xl p-3">
+      <h1 class="font-teko text-center text-5xl md:text-6xl p-3">
         {{ spotlightAnime.name }}
       </h1>
       <h3
@@ -67,7 +67,7 @@ const emit = defineEmits(["change:activeSpotlight"])
     <img
       :src="spotlightAnime.poster"
       alt=""
-      class="min-h-screen max-h-[600px] aspect-auto max-w-none"
+      class="min-h-screen max-h-[600px] md:min-w-lg aspect-auto max-w-none"
     />
   </div>
 </template>

@@ -1,7 +1,10 @@
 <script setup>
 useHead({
   bodyAttrs: {
-    class: "bg-bgColor overflow-x-hidden text-white",
+    class: "bg-bgColor overflow-x-hidden text-white no-scrollbar",
+  },
+  htmlAttrs: {
+    class: "scroll-smooth",
   },
 })
 
@@ -13,6 +16,7 @@ await useFetch("http://luka.lafp.cc:3004/anime/home").then(
 </script>
 
 <template>
-  <NavBar :genres="homePageAnime.genres" />
+  <NavBar v-if="homePageAnime" :genres="homePageAnime.genres" />
   <Header v-if="homePageAnime" :home-page-anime="homePageAnime" />
+  <Home v-if="homePageAnime" :home-page-anime="homePageAnime" />
 </template>

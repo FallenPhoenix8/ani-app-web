@@ -6,7 +6,7 @@ const emit = defineEmits(["update:is-active-menu"])
 </script>
 <template>
   <div
-    class="absolute flex md:hidden left-0 h-screen bg-bgColor bg-opacity-95 z-20 p-5 transition duration-200"
+    class="absolute flex lg:hidden left-0 h-screen bg-bgColor bg-opacity-95 z-20 p-5 transition duration-200"
     :class="{ '-translate-x-full': !isActive }"
   >
     <div class="flex flex-col">

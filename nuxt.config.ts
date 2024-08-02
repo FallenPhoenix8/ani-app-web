@@ -16,7 +16,7 @@ export default defineNuxtConfig({
         },
         {
           rel: "stylesheet",
-          href: "https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Teko:wght@300..700&display=swap",
+          href: "https://fonts.googleapis.com/css2?family=Mina:wght@400;700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Teko:wght@300..700&display=swap",
         },
       ],
       title: "AniApp",

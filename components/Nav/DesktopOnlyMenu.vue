@@ -3,10 +3,9 @@ const { genres } = defineProps({
   genres: Array,
 })
 const isVisibleGenres = ref(false)
-console.log(genres)
 </script>
 <template>
-  <div class="hidden md:flex space-x-10 items-center min-h-full">
+  <div class="hidden lg:flex space-x-10 items-center min-h-full">
     <div class="flex items-center space-x-4 min-h-full">
       <NuxtLink class="hover:text-primary cursor-pointer" to="/">Home</NuxtLink>
 
@@ -49,12 +48,8 @@ console.log(genres)
     </div>
 
     <div class="flex space-x-4">
-      <NuxtLink class="hover:text-primary cursor-pointer"
-        >Subbed Anime</NuxtLink
-      >
-      <NuxtLink class="hover:text-primary cursor-pointer"
-        >Dubbed Anime</NuxtLink
-      >
+      <NuxtLink class="hover:text-primary cursor-pointer">Subbed</NuxtLink>
+      <NuxtLink class="hover:text-primary cursor-pointer">Dubbed</NuxtLink>
     </div>
 
     <div class="flex space-x-4">
@@ -62,9 +57,6 @@ console.log(genres)
       <NuxtLink class="hover:text-primary cursor-pointer">OVAs</NuxtLink>
     </div>
     <div class="flex space-x-4">
-      <NuxtLink to="/#top-ten" class="hover:text-primary cursor-pointer"
-        >Top 10 Animes</NuxtLink
-      >
       <NuxtLink to="/#latest-episode" class="hover:text-primary cursor-pointer"
         >Latest Episode</NuxtLink
       >

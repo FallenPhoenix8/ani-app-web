@@ -13,6 +13,7 @@ module.exports = {
     fontFamily: {
       sans: ["Open Sans", "sans-serif"],
       teko: ["Teko"],
+      mina: ["Mina"],
     },
   },
 }
