@@ -5,6 +5,8 @@ const { spotlightAnime, count } = defineProps({
 })
 
 const indicatorArray = ref([1, 2, 3, 4, 5, 6, 7, 8, 9])
+
+const emit = defineEmits(["change:activeSpotlight"])
 </script>
 <template>
   <div
@@ -51,7 +53,7 @@ const indicatorArray = ref([1, 2, 3, 4, 5, 6, 7, 8, 9])
           class="bg-slate-500 h-2 w-6 rounded-lg indicator-tile cursor-pointer"
           v-for="indicator in indicatorArray"
           :key="indicator"
-          @click="$emit('change:activeSpotlight', indicator)"
+          @click="() => emit('change:activeSpotlight', indicator)"
           :class="{ 'active-indicator-tile': indicator == spotlightAnime.rank }"
         ></div>
       </div>

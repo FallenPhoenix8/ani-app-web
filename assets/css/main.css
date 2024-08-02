@@ -27,3 +27,8 @@
 .active-indicator-tile::before {
   @apply w-full bg-primary;
 }
+
+.important-left-0 {
+  margin-left: 0 !important;
+  left: 0 !important;
+}

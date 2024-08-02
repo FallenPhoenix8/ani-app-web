@@ -22,7 +22,9 @@ function circleSpotlight(index) {
     }
   }, 7000)
 }
-circleSpotlight(index.value)
+onMounted(() => {
+  circleSpotlight(index.value)
+})
 
 function changeActiveSpotlight(index, newSpotlightIndex) {
   index = newSpotlightIndex - 1
@@ -35,16 +37,13 @@ function changeActiveSpotlight(index, newSpotlightIndex) {
       id="spotlight-anime"
       class="relative overflow-x-hidden w-full min-w-full"
     >
-      <ClientOnly>
-        <SpotlightAnime
-          :spotlight-anime="currentSpotlightAnime"
-          :count="spotlightAnimes.length"
-          @change:activeSpotlight="
-            (newSpotlightIndex) =>
-              changeActiveSpotlight(index, newSpotlightIndex)
-          "
-        />
-      </ClientOnly>
+      <SpotlightAnime
+        :spotlight-anime="currentSpotlightAnime"
+        :count="spotlightAnimes.length"
+        @change:activeSpotlight="
+          (newSpotlightIndex) => changeActiveSpotlight(index, newSpotlightIndex)
+        "
+      />
     </div>
   </header>
 </template>

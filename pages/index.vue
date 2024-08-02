@@ -6,17 +6,13 @@ useHead({
 })
 
 let homePageAnime = undefined
-await fetch("http://luka.lafp.cc:3004/anime/home")
-  .then((res) => res.json())
-  .then((data) => {
-    homePageAnime = data
-  })
-  .catch((err) => {
-    console.error(err)
-  })
+
+await useFetch("http://luka.lafp.cc:3004/anime/home").then(
+  (data) => (homePageAnime = data.data.value)
+)
 </script>
 
 <template>
-  <NavBar />
+  <NavBar :genres="homePageAnime.genres" />
   <Header v-if="homePageAnime" :home-page-anime="homePageAnime" />
 </template>
