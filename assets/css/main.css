@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.add-to-watchlist-tooltip {
+  @apply relative;
+}
+
+.add-to-watchlist-tooltip::before {
+  content: "Add to watchlist";
+  @apply absolute hidden hover:block bottom-[110%] left-1/2 -translate-x-1/2 whitespace-nowrap px-3 py-2 rounded-md bg-gray-600 text-sm;
+}
+
+.indicator-tile {
+  @apply relative rounded-full transition-all duration-200 ease-linear;
+}
+
+.indicator-tile::before {
+  content: "";
+  @apply absolute w-0 h-full left-0 bg-transparent rounded-full transition-width duration-[7000ms] ease-linear;
+}
+
+.active-indicator-tile {
+  @apply w-12;
+}
+
+.active-indicator-tile::before {
+  @apply w-full bg-primary;
+}
