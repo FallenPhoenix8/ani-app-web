@@ -2,15 +2,7 @@
 const searchQuery = ref("")
 </script>
 <template>
-  <div class="flex flex-row-reverse items-center">
-    <!-- TODO PFP SYSTEM -->
-    <NuxtLink class="py-2" to="#">
-      <img
-        src="https://picsum.photos/100"
-        alt=""
-        class="aspect-square rounded-full max-h-12"
-      />
-    </NuxtLink>
+  <div class="flex flex-row items-center">
     <form class="relative mx-5">
       <input
         type="text"
@@ -28,5 +20,14 @@ const searchQuery = ref("")
         </ClientOnly>
       </button>
     </form>
+
+    <!-- TODO PFP SYSTEM -->
+    <NuxtLink class="py-2" to="#">
+      <img
+        src="https://picsum.photos/100"
+        alt=""
+        class="aspect-square rounded-full max-h-12"
+      />
+    </NuxtLink>
   </div>
 </template>
