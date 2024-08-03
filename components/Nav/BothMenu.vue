@@ -19,11 +19,13 @@ const searchQuery = ref("")
         v-model="searchQuery"
       />
       <button class="absolute right-0 z-10">
-        <font-awesome-icon
-          icon="search"
-          size="xl"
-          class="hover:text-primary focus:text-primary transition duration-200"
-        />
+        <ClientOnly>
+          <font-awesome-icon
+            icon="search"
+            size="xl"
+            class="hover:text-primary focus:text-primary transition duration-200"
+          />
+        </ClientOnly>
       </button>
     </form>
   </div>
