@@ -6,7 +6,7 @@ const { icon, text } = defineProps({
 </script>
 <template>
   <div
-    class="ml-1 p-1 text-xs text-center text-black space-x-1 font-bold"
+    class="ml-1 p-1 text-xs xl:text-sm text-center text-black space-x-1 font-bold"
     :class="$attrs.class"
   >
     <span>

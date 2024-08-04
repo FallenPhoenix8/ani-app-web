@@ -62,7 +62,7 @@ const emit = defineEmits(["update:is-active-menu"])
           <div class="py-3"></div>
           <NuxtLink
             class="w-full px-4 py-2 text-xl ui-tile"
-            to="#"
+            to="/#latest-episode"
             @click="emit('update:is-active-menu')"
             >Latest Episode</NuxtLink
           >

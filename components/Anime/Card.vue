@@ -26,7 +26,7 @@ onMounted(async () => {
           class="absolute w-full min-h-full max-h-full z-40 rounded-md bg-bgColor opacity-0 transition duration-300 hover:opacity-100 group-focus:opacity-100 hover:bg-opacity-70 group-focus:bg-opacity-70"
         >
           <h5
-            class="line-clamp-3 font-teko font-bold text-md mx-auto mt-5 mb-2 px-4 text-center md:text-left md:text-lg"
+            class="line-clamp-3 font-teko font-bold text-md mx-auto mt-5 mb-2 px-4 text-center md:text-left md:text-lg lg:text-2xl"
           >
             {{ anime.name }}
           </h5>
@@ -51,7 +51,7 @@ onMounted(async () => {
         <img
           :src="anime.poster"
           :alt="`${anime.name} poster`"
-          class="object-cover min-h-60 rounded-md lg:min-w-60"
+          class="object-cover min-h-60 rounded-md lg:min-w-60 max-h-80"
         />
       </div>
       <div>

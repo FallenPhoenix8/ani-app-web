@@ -10,5 +10,10 @@ const { homePageAnime } = defineProps({
       :animes="homePageAnime.trendingAnimes"
       id="trending"
     />
+    <AnimeRow
+      title="Latest Episode"
+      :animes="homePageAnime.latestEpisodeAnimes"
+      id="latest-episode"
+    />
   </main>
 </template>
