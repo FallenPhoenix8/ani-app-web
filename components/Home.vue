@@ -15,5 +15,21 @@ const { homePageAnime } = defineProps({
       :animes="homePageAnime.latestEpisodeAnimes"
       id="latest-episode"
     />
+    <AnimeRow
+      title="Latest Completed"
+      :animes="homePageAnime.latestCompletedAnimes"
+      id="latest-completed"
+    />
+    <AnimeRow
+      title="Most Popular"
+      :animes="homePageAnime.mostPopularAnimes"
+      id="most-popular"
+    />
+    <AnimeRow
+      title="Top Upcoming"
+      :animes="homePageAnime.topUpcomingAnimes"
+      :is-upcoming="true"
+      id="top-upcoming"
+    />
   </main>
 </template>
