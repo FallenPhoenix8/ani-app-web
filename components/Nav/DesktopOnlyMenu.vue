@@ -5,10 +5,12 @@ const { genres } = defineProps({
 const isVisibleGenres = ref(false)
 </script>
 <template>
-  <div class="hidden lg:flex space-x-10 items-center min-h-full">
+  <div
+    class="hidden lg:flex items-center min-h-full text-sm xl:space-x-10 xl:text-base"
+  >
     <div class="flex items-center space-x-4 min-h-full">
       <NuxtLink
-        class="hover:text-primary focus:text-primary focus:outline-none cursor-pointer"
+        class="ui-tile px-3 py-2"
         to="/"
         @focusin="isVisibleGenres = false"
         >Home</NuxtLink
@@ -18,7 +20,7 @@ const isVisibleGenres = ref(false)
         <NuxtLink
           class="flex relative space-x-1 p-2 rounded-t-md transition duration-200 focus:outline-primary"
           :class="{ 'bg-bgColor': isVisibleGenres }"
-          to="#genres"
+          to="#"
           @click="isVisibleGenres = !isVisibleGenres"
         >
           <span class="cursor-pointer">Genres</span>
@@ -38,7 +40,7 @@ const isVisibleGenres = ref(false)
               <NuxtLink
                 v-for="genre in genres"
                 :key="genre"
-                class="mx-3 py-2 px-3 cursor-pointer transition duration-200 rounded-md hover:bg-slate-600 hover:text-primary focus:text-primary focus:outline-none focus:bg-slate-600"
+                class="mx-3 py-2 px-3 cursor-pointer ui-tile"
                 :to="{ name: 'genre', query: { genre: genre } }"
               >
                 {{ genre }}
@@ -49,7 +51,7 @@ const isVisibleGenres = ref(false)
       </ClientOnly>
 
       <NuxtLink
-        class="hover:text-primary focus:text-primary focus:outline-none cursor-pointer"
+        class="ui-tile px-3 py-2 h-full"
         to="/#trending"
         @focusin="isVisibleGenres = false"
         >Trending</NuxtLink
@@ -58,12 +60,12 @@ const isVisibleGenres = ref(false)
 
     <div class="flex space-x-4">
       <NuxtLink
-        class="hover:text-primary focus:text-primary focus:outline-none cursor-pointer"
+        class="ui-tile px-3 py-2 h-full"
         @focusin="isVisibleGenres = false"
         >Subbed</NuxtLink
       >
       <NuxtLink
-        class="hover:text-primary focus:text-primary focus:outline-none cursor-pointer"
+        class="ui-tile px-3 py-2 h-full"
         @focusin="isVisibleGenres = false"
         >Dubbed</NuxtLink
       >
@@ -71,12 +73,12 @@ const isVisibleGenres = ref(false)
 
     <div class="flex space-x-4">
       <NuxtLink
-        class="hover:text-primary focus:text-primary focus:outline-none cursor-pointer"
+        class="ui-tile px-3 py-2 h-full"
         @focusin="isVisibleGenres = false"
         >Movies</NuxtLink
       >
       <NuxtLink
-        class="hover:text-primary focus:text-primary focus:outline-none cursor-pointer"
+        class="ui-tile px-3 py-2 h-full"
         @focusin="isVisibleGenres = false"
         >OVAs</NuxtLink
       >
@@ -84,7 +86,7 @@ const isVisibleGenres = ref(false)
     <div class="flex space-x-4">
       <NuxtLink
         to="/#latest-episode"
-        class="hover:text-primary focus:text-primary focus:outline-none cursor-pointer"
+        class="ui-tile px-3 py-2 h-full"
         @focusin="isVisibleGenres = false"
         >Latest Episode</NuxtLink
       >

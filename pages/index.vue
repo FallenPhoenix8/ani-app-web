@@ -1,10 +1,10 @@
 <script setup>
 useHead({
   bodyAttrs: {
-    class: "bg-bgColor overflow-x-hidden text-white no-scrollbar",
+    class: "bg-bgColor overflow-x-hidden text-white",
   },
   htmlAttrs: {
-    class: "scroll-smooth",
+    class: "scroll-smooth no-scrollbar",
   },
 })
 

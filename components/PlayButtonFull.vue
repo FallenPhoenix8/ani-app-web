@@ -5,8 +5,8 @@ const { text } = defineProps({
 const isMouseIn = ref(true)
 </script>
 <template>
-  <a
-    :href="$attrs.href"
+  <NuxtLink
+    :to="$attrs.to"
     :class="$attrs.class"
     class="group px-5 py-2 bg-primary text-black uppercase text-center max-w-60 rounded-md shadow transition duration-200 hover:shadow-lg hover:-translate-y-1 focus:shadow-lg focus:-translate-y-1"
     @mouseenter="isMouseIn = !isMouseIn"
@@ -27,5 +27,5 @@ const isMouseIn = ref(true)
         text
       }}</span>
     </span>
-  </a>
+  </NuxtLink>
 </template>

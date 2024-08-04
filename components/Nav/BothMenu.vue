@@ -6,7 +6,7 @@ const searchQuery = ref("")
     <form class="relative mx-5">
       <input
         type="text"
-        class="border-b border-b-slate-300 bg-transparent z-20 w-60 focus:outline-none focus:w-72 focus:border-b-primary transition-all duration-500"
+        class="border-b border-b-slate-300 bg-transparent z-20 w-52 focus:outline-none focus:w-60 lg:w-60 lg:focus:w-72 focus:border-b-primary transition-all duration-500"
         placeholder="Search anime..."
         v-model="searchQuery"
       />

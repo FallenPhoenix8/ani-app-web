@@ -11,24 +11,27 @@ console.log(spotlightAnimes)
 const currentSpotlightAnime = ref(spotlightAnimes[0])
 
 const index = ref(1)
+const headerInterval = ref(undefined)
 
-function circleSpotlight(index) {
-  setInterval(() => {
-    currentSpotlightAnime.value = spotlightAnimes[index]
-    if (index != spotlightAnimes.length - 1) {
-      index++
+const circleSpotlight = () => {
+  const headerInterval = setInterval(() => {
+    currentSpotlightAnime.value = spotlightAnimes[index.value]
+    if (index.value != spotlightAnimes.length - 1) {
+      index.value++
     } else {
-      index = 0
+      index.value = 0
     }
   }, 7000)
 }
+
 onMounted(() => {
-  circleSpotlight(index.value)
+  circleSpotlight()
 })
 
-function changeActiveSpotlight(index, newSpotlightIndex) {
-  index = newSpotlightIndex - 1
-  currentSpotlightAnime.value = spotlightAnimes[index]
+function changeActiveSpotlight(newSpotlightIndex) {
+  index.value = newSpotlightIndex - 1
+  currentSpotlightAnime.value = spotlightAnimes[index.value]
+  clearInterval(headerInterval)
 }
 </script>
 <template>
@@ -41,7 +44,7 @@ function changeActiveSpotlight(index, newSpotlightIndex) {
         :spotlight-anime="currentSpotlightAnime"
         :count="spotlightAnimes.length"
         @change:activeSpotlight="
-          (newSpotlightIndex) => changeActiveSpotlight(index, newSpotlightIndex)
+          (newSpotlightIndex) => changeActiveSpotlight(newSpotlightIndex)
         "
       />
     </div>

@@ -15,6 +15,9 @@ module.exports = {
       lineClamp: {
         8: 8,
       },
+      zIndex: {
+        100: 100,
+      },
     },
     fontFamily: {
       sans: ["Open Sans", "sans-serif"],

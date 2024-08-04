@@ -9,5 +9,5 @@ const emit = defineEmits(["update:is-active-menu"])
       </ClientOnly>
     </div>
   </button>
-  <div class="ml-5 min-w-[21px] hidden md:inline-block"></div>
+  <div class="ml-5 min-w-[21px] hidden xl:inline-block"></div>
 </template>

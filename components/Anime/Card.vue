@@ -30,7 +30,7 @@ onMounted(async () => {
           >
             {{ anime.name }}
           </h5>
-          <p class="pl-11 line-clamp-5 lg:line-clamp-8 lg:px-5">
+          <p class="px-2 line-clamp-5 lg:line-clamp-8 lg:px-5">
             {{ description }}
           </p>
         </div>

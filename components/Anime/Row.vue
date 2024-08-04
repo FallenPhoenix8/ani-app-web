@@ -6,7 +6,7 @@ const { animes, title } = defineProps({
 </script>
 <template>
   <div :id="$attrs.id" class="flex flex-col">
-    <h2>{{ title }}</h2>
+    <h2 class="max-w-md">{{ title }}</h2>
     <div
       class="flex mb-5 space-x-10 lg:space-x-7 overflow-x-auto max-w-none no-scrollbar"
     >
