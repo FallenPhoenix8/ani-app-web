@@ -41,7 +41,7 @@ const isVisibleGenres = ref(false)
                 v-for="genre in genres"
                 :key="genre"
                 class="mx-3 py-2 px-3 cursor-pointer ui-tile"
-                :to="{ name: 'genre', query: { genre: genre } }"
+                :to="{ name: 'genre', query: { genre: genre, page: 1 } }"
               >
                 {{ genre }}
               </NuxtLink>

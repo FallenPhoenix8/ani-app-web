@@ -10,7 +10,7 @@ useHead({
 
 let homePageAnime = undefined
 
-await useFetch("http://luka.lafp.cc:3004/anime/home").then(
+await useFetch("http://193.150.21.20:3004/anime/home").then(
   (data) => (homePageAnime = data.data.value)
 )
 </script>

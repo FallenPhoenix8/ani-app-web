@@ -9,6 +9,8 @@ function updateIsActiveMobileMenu() {
   isActiveMobileMenu.value = !isActiveMobileMenu.value
   document.body.classList.toggle("overflow-hidden")
 }
+
+const emit = defineEmits(["update:genres"])
 </script>
 <template>
   <nav

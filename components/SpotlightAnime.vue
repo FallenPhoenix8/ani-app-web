@@ -49,6 +49,7 @@ const emit = defineEmits(["change:activeSpotlight"])
             text="Start watching E1"
             :to="`/watch?id=${spotlightAnime.id}`"
             class="ml-5"
+            icon="play"
           />
           <SaveButton />
         </div>

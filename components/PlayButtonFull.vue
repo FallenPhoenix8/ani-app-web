@@ -1,8 +1,12 @@
 <script setup>
-const { text } = defineProps({
+const { text, icon } = defineProps({
   text: String,
+  icon: String,
 })
+
 const isMouseIn = ref(true)
+const iconPath = `/images/icons/${icon}.svg`
+console.log(iconPath)
 </script>
 <template>
   <NuxtLink
@@ -15,13 +19,8 @@ const isMouseIn = ref(true)
     @focusout="isMouseIn = !isMouseIn"
   >
     <span class="flex items-center">
-      <img
-        src="~/assets/images/icons/play.svg"
-        alt=""
-        class="h-5 w-5"
-        v-if="isMouseIn"
-      />
-      <font-awesome-icon icon="play" beat-fade v-else />
+      <img :src="iconPath" alt="" class="h-5 w-5" v-if="isMouseIn" />
+      <font-awesome-icon :icon="icon" beat-fade v-else />
 
       <span class="ml-3 transition duration-200 group-focus:-translate-x-1">{{
         text
