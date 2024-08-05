@@ -18,7 +18,7 @@ const isVisibleGenres = ref(false)
 
       <ClientOnly>
         <NuxtLink
-          class="flex relative space-x-1 p-2 rounded-t-md transition duration-200 focus:outline-primary"
+          class="flex relative space-x-1 p-2 rounded-t-md transition duration-200 ui-tile"
           :class="{ 'bg-bgColor': isVisibleGenres }"
           to="#"
           @click="isVisibleGenres = !isVisibleGenres"
