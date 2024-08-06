@@ -6,6 +6,8 @@ const { anime, isUpcoming } = defineProps({
 const description = ref("")
 const episodes = ref({ sub: "", dub: "" })
 
+async function fetchWithDelay() {}
+
 onBeforeMount(async () => {
   if (!isUpcoming) {
     await $fetch(`http://193.150.21.20:3004/anime/info?id=${anime.id}`)
