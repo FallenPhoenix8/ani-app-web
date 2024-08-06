@@ -6,10 +6,10 @@ const { anime, isUpcoming } = defineProps({
 const description = ref("")
 const episodes = ref({ sub: "", dub: "" })
 
-onMounted(async () => {
+onBeforeMount(async () => {
   if (!isUpcoming) {
-    await fetch(`http://193.150.21.20:3004/anime/info?id=${anime.id}`)
-      .then((res) => res.json())
+    await $fetch(`http://193.150.21.20:3004/anime/info?id=${anime.id}`)
+      // .then((res) => res.json())
       .then((data) => {
         episodes.value = data.anime.info.stats.episodes
         description.value = data.anime.info.description
@@ -69,7 +69,7 @@ onMounted(async () => {
   </NuxtLink>
   <NuxtLink
     :to="`/watch?id=${anime.id}`"
-    class="group focus:outline-none hover:-translate-y-2 focus:-translate-y-2 transition duration-200 rounded-md cursor-pointer min-w-60 md:min-w-72 max-w-80"
+    class="group focus:outline-none hover:-translate-y-2 focus:-translate-y-2 transition duration-200 rounded-md cursor-pointer min-w-52 md:min-w-72 max-w-60 md:max-w-80"
     v-else
   >
     <div class="rounded-md">

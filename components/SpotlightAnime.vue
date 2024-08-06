@@ -45,7 +45,7 @@ const emit = defineEmits(["change:activeSpotlight"])
 
       <ClientOnly>
         <div class="flex justify-center md:justify-start space-x-3 text-white">
-          <PlayButtonFull
+          <ButtonFull
             text="Start watching E1"
             :to="`/watch?id=${spotlightAnime.id}`"
             class="ml-5"

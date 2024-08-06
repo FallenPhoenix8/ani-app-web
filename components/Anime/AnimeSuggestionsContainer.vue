@@ -8,7 +8,7 @@ const { suggestions, searchQuery } = defineProps({
 </script>
 <template>
   <div
-    class="fixed flex flex-col justify-center w-full top-16 left-0 right-0 z-100 py-4"
+    class="fixed flex flex-col justify-center w-full top-16 left-0 right-0 z-100 pb-4 px-2 md:px-4"
     :class="{ 'bg-slate-800': searchQuery.length > 0 }"
   >
     <h3
@@ -25,5 +25,6 @@ const { suggestions, searchQuery } = defineProps({
         v-if="searchQuery"
       />
     </div>
+    <ButtonFull icon="search" text="See more" class="mt-3" to="#" />
   </div>
 </template>

@@ -29,7 +29,7 @@ function handleScroll(event) {
   <div :id="$attrs.id" class="flex flex-col">
     <h2 class="max-w-md">{{ title }}</h2>
     <div
-      class="relative flex mb-5 space-x-10 lg:space-x-7 overflow-x-auto max-w-none no-scrollbar"
+      class="relative flex mb-5 space-x-3 md:space-x-7 lg:space-x-10 overflow-x-auto max-w-none no-scrollbar"
       ref="rowElement"
       @scroll="(event) => handleScroll(event)"
     >

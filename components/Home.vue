@@ -4,7 +4,7 @@ const { homePageAnime } = defineProps({
 })
 </script>
 <template>
-  <main class="relative lg:-mt-32 z-90 ml-5">
+  <main class="relative mt-1 lg:-mt-32 z-90 ml-5">
     <AnimeRow
       title="Trending"
       :animes="homePageAnime.trendingAnimes"
