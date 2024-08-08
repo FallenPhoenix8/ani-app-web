@@ -3,10 +3,7 @@ const { homePageAnime } = defineProps({
   "home-page-anime": Object,
 })
 
-console.log(homePageAnime)
-
 const spotlightAnimes = homePageAnime.spotlightAnimes
-console.log(spotlightAnimes)
 
 const currentSpotlightAnime = ref(spotlightAnimes[0])
 

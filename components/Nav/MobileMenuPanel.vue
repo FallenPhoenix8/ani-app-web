@@ -36,26 +36,26 @@ const emit = defineEmits(["update:is-active-menu"])
           <div class="py-3"></div>
           <NuxtLink
             class="w-full px-4 py-2 text-xl ui-tile"
-            to="#"
+            to="/subbed-anime"
             @click="emit('update:is-active-menu')"
             >Subbed Anime</NuxtLink
           >
           <NuxtLink
             class="w-full px-4 py-2 text-xl ui-tile"
-            to="#"
+            to="/dubbed-anime"
             @click="emit('update:is-active-menu')"
             >Dubbed Anime</NuxtLink
           >
           <div class="py-3"></div>
           <NuxtLink
             class="w-full px-4 py-2 text-xl ui-tile"
-            to="#"
+            to="/movie?page=1"
             @click="emit('update:is-active-menu')"
             >Movies</NuxtLink
           >
           <NuxtLink
             class="w-full px-4 py-2 text-xl ui-tile"
-            to="#"
+            to="/ova?page=1"
             @click="emit('update:is-active-menu')"
             >OVAs</NuxtLink
           >

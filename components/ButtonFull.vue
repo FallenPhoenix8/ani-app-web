@@ -6,7 +6,6 @@ const { text, icon } = defineProps({
 
 const isMouseIn = ref(true)
 const iconPath = `/images/icons/${icon}.svg`
-console.log(iconPath)
 </script>
 <template>
   <NuxtLink

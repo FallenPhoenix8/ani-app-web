@@ -62,11 +62,13 @@ const isVisibleGenres = ref(false)
       <NuxtLink
         class="ui-tile px-3 py-2 h-full"
         @focusin="isVisibleGenres = false"
+        to="/subbed-anime?page=1"
         >Subbed</NuxtLink
       >
       <NuxtLink
         class="ui-tile px-3 py-2 h-full"
         @focusin="isVisibleGenres = false"
+        to="/dubbed-anime?page=1"
         >Dubbed</NuxtLink
       >
     </div>
@@ -75,11 +77,13 @@ const isVisibleGenres = ref(false)
       <NuxtLink
         class="ui-tile px-3 py-2 h-full"
         @focusin="isVisibleGenres = false"
+        to="/movie?page=1"
         >Movies</NuxtLink
       >
       <NuxtLink
         class="ui-tile px-3 py-2 h-full"
         @focusin="isVisibleGenres = false"
+        to="/ova?page=1"
         >OVAs</NuxtLink
       >
     </div>

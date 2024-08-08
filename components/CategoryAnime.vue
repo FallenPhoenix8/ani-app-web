@@ -1,4 +1,8 @@
 <script setup>
+const { categoryName, destination } = defineProps({
+  "category-name": String,
+  destination: String,
+})
 useHead({
   bodyAttrs: {
     class: "bg-bgColor overflow-x-hidden text-white",
@@ -8,28 +12,23 @@ useHead({
   },
 })
 
-const page = ref(() => useRoute().query.page)
-const genreAnime = ref(undefined)
-const genreKebabCase = ref("")
+const animeRes = ref(undefined)
 const pages = ref([])
+const page = ref(() => useRoute().query.page)
 
 async function updateGenres() {
-  genreKebabCase.value = useRoute().query.genre
   page.value = useRoute().query.page
 
-  genreKebabCase.value = genreKebabCase.value.replace(" ", "-")
-  genreKebabCase.value = genreKebabCase.value.toLowerCase()
-
   await fetch(
-    `http://193.150.21.20:3004/anime/genre/${genreKebabCase.value}?page=${page.value}`
+    `http://193.150.21.20:3004/anime/${categoryName}?page=${page.value}`
   )
     .then((res) => res.json())
     .then((data) => {
-      genreAnime.value = data
+      animeRes.value = data
 
       pages.value = []
 
-      for (let i = 1; i <= genreAnime.value.totalPages; i++) {
+      for (let i = 1; i <= animeRes.value.totalPages; i++) {
         pages.value.push(i)
       }
     })
@@ -52,6 +51,12 @@ watch(
 )
 </script>
 <template>
-  <NavBar :genres="genreAnime.genres" v-if="genreAnime" />
-  <GenreAnimesGrid :genre-anime="genreAnime" v-if="genreAnime" :pages="pages" />
+  <NavBar :genres="animeRes.genres" v-if="animeRes" />
+  <AnimeGridMost
+    :anime="animeRes"
+    :pages="pages"
+    :title="animeRes.category"
+    :destination="destination"
+    v-if="animeRes"
+  />
 </template>

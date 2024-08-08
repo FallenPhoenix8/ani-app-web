@@ -2,7 +2,6 @@
 const { anime } = defineProps({
   anime: Object,
 })
-console.log(anime)
 </script>
 <template>
   <NuxtLink :to="`/watch?id=${anime.id}`" class="flex space-x-3 pt-3">
